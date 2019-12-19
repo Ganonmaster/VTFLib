@@ -14,7 +14,7 @@ jobs:
     - name: clone libtxc_dxtn
       run: git clone git://people.freedesktop.org/~mareko/libtxc_dxtn /home/runner/work/VTFLib/VTFLib/libtxc_dxtn
     - name: gen
-      run: cd /home/runner/work/VTFLib/VTFLib/libtxc_dxtn && bash /home/runner/work/VTFLib/VTFLib/libtxc_dxtn/autogen.sh && make && make install
+      run: cd /home/runner/work/VTFLib/VTFLib/libtxc_dxtn && bash /home/runner/work/VTFLib/VTFLib/libtxc_dxtn/autogen.sh && make && sudo make install
     - name: mkdir /home/runner/work/VTFLib/VTFLib/build
       run: mkdir /home/runner/work/VTFLib/VTFLib/build && cd /home/runner/work/VTFLib/VTFLib/build && ls -lah /home/runner/work/VTFLib/VTFLib/
     - name: cmake
@@ -22,4 +22,4 @@ jobs:
     - name: make -j`nproc`
       run: make -j`nproc`
     - name: make install
-      run: make install
+      run: sudo make install
