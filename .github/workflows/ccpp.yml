@@ -12,11 +12,11 @@ jobs:
     - name: install deps
       run: sudo apt update && sudo apt install libglu1-mesa-dev freeglut3-dev mesa-common-dev
     - name: cd
-      run: cd /home/runner/work/VTFLib/
+      run: cd /home/runner/work/VTFLib/VTFLib/libtxc_dxtn
     - name: clone libtxc_dxtn
-      run: git clone git://people.freedesktop.org/~mareko/libtxc_dxtn /home/runner/work/VTFLib/libtxc_dxtn
+      run: git clone git://people.freedesktop.org/~mareko/libtxc_dxtn /home/runner/work/VTFLib/VTFLib/libtxc_dxtn
     - name: cd
-      run: cd /home/runner/work/VTFLib/libtxc_dxtn
+      run: cd /home/runner/work/VTFLib/VTFLib/libtxc_dxtn
     - name: ls
       run: ls -lah
     - name: gen
