@@ -17,6 +17,8 @@ jobs:
       run: git clone git://people.freedesktop.org/~mareko/libtxc_dxtn /home/runner/work/VTFLib/libtxc_dxtn
     - name: cd
       run: cd /home/runner/work/VTFLib/libtxc_dxtn
+    - name: ls
+      run: ls -lah
     - name: gen
       run: bash ./autogen.sh
     - name: mkdir /home/runner/work/VTFLib/VTFLib/build
