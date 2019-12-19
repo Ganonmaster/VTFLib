@@ -13,12 +13,8 @@ jobs:
       run: sudo apt update && sudo apt install libglu1-mesa-dev freeglut3-dev mesa-common-dev
     - name: clone libtxc_dxtn
       run: git clone git://people.freedesktop.org/~mareko/libtxc_dxtn /home/runner/work/VTFLib/VTFLib/libtxc_dxtn
-    - name: cd
-      run: cd /home/runner/work/VTFLib/VTFLib/libtxc_dxtn/libtxc_dxtn
-    - name: ls
-      run: ls -lah
     - name: gen
-      run: bash ./autogen.sh
+      run: cd /home/runner/work/VTFLib/VTFLib/libtxc_dxtn && bash /home/runner/work/VTFLib/VTFLib/libtxc_dxtn/autogen.sh
     - name: mkdir /home/runner/work/VTFLib/VTFLib/build
       run: mkdir /home/runner/work/VTFLib/VTFLib/build && cd /home/runner/work/VTFLib/VTFLib/build && ls -lah /home/runner/work/VTFLib/VTFLib/
     - name: cmake
