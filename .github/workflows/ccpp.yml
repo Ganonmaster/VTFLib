@@ -9,8 +9,8 @@ jobs:
     
     steps:
     - uses: actions/checkout@v1
-    - name: mkdir /home/runner/work/VTFLib/build
-      run: mkdir /home/runner/work/VTFLib/build && cd /home/runner/work/VTFLib/build && ls -lah /home/runner/work/VTFLib/
+    - name: mkdir /home/runner/work/VTFLib/VTFLib/build
+      run: mkdir /home/runner/work/VTFLib/VTFLib/build && cd /home/runner/work/VTFLib/VTFLib/build && ls -lah /home/runner/work/VTFLib/VTFLib/
     - name: cmake
       run: cmake .. -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr
     - name: make -j`nproc`
