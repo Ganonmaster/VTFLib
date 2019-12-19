@@ -1,0 +1,19 @@
+name: C/C++ CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v1
+    - name: mkdir build
+      run: mkdir build && cd build
+    - name: cmake
+      run: cmake .. -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr
+    - name: make -j`nproc`
+      run: make -j`nproc`
+    - name: make install
+      run: make install
