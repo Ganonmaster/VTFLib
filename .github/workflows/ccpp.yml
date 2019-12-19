@@ -14,11 +14,11 @@ jobs:
     - name: cd
       run: cd /home/runner/work/VTFLib/
     - name: clone libtxc_dxtn
-      run: git clone git://people.freedesktop.org/~mareko/libtxc_dxtn
+      run: git clone git://people.freedesktop.org/~mareko/libtxc_dxtn /home/runner/work/VTFLib/libtxc_dxtn
     - name: cd
       run: cd /home/runner/work/VTFLib/libtxc_dxtn
     - name: gen
-      run: bash autogen.sh
+      run: bash ./autogen.sh
     - name: mkdir /home/runner/work/VTFLib/VTFLib/build
       run: mkdir /home/runner/work/VTFLib/VTFLib/build && cd /home/runner/work/VTFLib/VTFLib/build && ls -lah /home/runner/work/VTFLib/VTFLib/
     - name: cmake
