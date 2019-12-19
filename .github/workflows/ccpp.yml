@@ -14,7 +14,7 @@ jobs:
     - name: clone libtxc_dxtn
       run: git clone git://people.freedesktop.org/~mareko/libtxc_dxtn /home/runner/work/VTFLib/VTFLib/libtxc_dxtn
     - name: cd
-      run: cd /home/runner/work/VTFLib/VTFLib/libtxc_dxtn
+      run: cd /home/runner/work/VTFLib/VTFLib/libtxc_dxtn/libtxc_dxtn
     - name: ls
       run: ls -lah
     - name: gen
